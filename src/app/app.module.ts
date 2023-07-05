@@ -13,6 +13,9 @@ import { MatListModule } from '@angular/material/list';
 import { MyNavComponent } from './test/my-nav/my-nav.component';
 import { ButtonComponent } from './button/button.component';
 import { FormsComponent } from './forms/forms.component';
+import { SearchPipe } from './search.pipe';
+import { MatTableModule } from '@angular/material/table';
+import { FilterComponent } from './filter/filter.component';
 
 
 
@@ -22,7 +25,8 @@ import { FormsComponent } from './forms/forms.component';
     TestComponent,
     MyNavComponent,
     ButtonComponent,
-    FormsComponent,
+    SearchPipe,
+    FilterComponent,
     
   ],
   imports: [
@@ -33,7 +37,10 @@ import { FormsComponent } from './forms/forms.component';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatTableModule,
+    FormsComponent
+  
   ],
   providers: [],
   bootstrap: [AppComponent]

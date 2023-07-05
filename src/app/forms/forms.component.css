@@ -1,0 +1,15 @@
+.container{position: relative;}
+.h3{
+    position: relative;
+    left:600px
+}
+table {
+    position: relative;
+    left: 300px;
+    width: 500px;
+  }
+  .mdc-data-table__table{
+    min-width: 500px;
+    
+  }
+  

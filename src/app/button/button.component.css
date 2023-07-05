@@ -1,12 +1,20 @@
 
 .container-button{
     position: relative;
-    
-    left: 200px;
+    text-align: start;
+    left: 420px;
 }
 .button1{
     position:relative;
-    
+    top: -36px;
     text-align: end;
     
+}
+.text{
+    position: relative;
+    left: 420px;
+}
+.example-button-row{
+    position: relative;
+    left: 420px;
 }
