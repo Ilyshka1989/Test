@@ -1,1 +1,38 @@
-<p>filter works!</p>
+<div class="filter">
+    <h3>Фильтр</h3>
+<div class="container">
+    <mat-form-field appearance="outline">
+        <mat-label>Логин</mat-label>
+        <input matInput placeholder="">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>E-mail</mat-label>
+        <input matInput placeholder="">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Телефон</mat-label>
+        <input matInput placeholder="">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Роль</mat-label>
+        <input matInput placeholder="">  
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Дата создания</mat-label>
+        <input matInput [matDatepicker]="picker">
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Дата изменения</mat-label>
+        <input matInput [matDatepicker]="picker">
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Статус</mat-label>
+        <input matInput placeholder="">  
+      </mat-form-field>
+</div>
+</div>
+

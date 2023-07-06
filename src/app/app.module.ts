@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TestComponent } from './test/test.component';
@@ -16,6 +15,10 @@ import { FormsComponent } from './forms/forms.component';
 import { SearchPipe } from './search.pipe';
 import { MatTableModule } from '@angular/material/table';
 import { FilterComponent } from './filter/filter.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatNativeDateModule} from '@angular/material/core';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
 
 
@@ -26,7 +29,7 @@ import { FilterComponent } from './filter/filter.component';
     MyNavComponent,
     ButtonComponent,
     SearchPipe,
-    FilterComponent,
+    
     
   ],
   imports: [
@@ -39,8 +42,12 @@ import { FilterComponent } from './filter/filter.component';
     MatIconModule,
     MatListModule,
     MatTableModule,
-    FormsComponent
-  
+    FormsComponent,
+    MatFormFieldModule,
+    MatInputModule,
+    MatNativeDateModule,
+    MatDatepickerModule,
+    FilterComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
