@@ -6,9 +6,10 @@ import { map, shareReplay } from 'rxjs/operators';
 @Component({
   selector: 'app-my-nav',
   templateUrl: './my-nav.component.html',
-  styleUrls: ['./my-nav.component.css']
+  styleUrls: ['./my-nav.component.css'], 
 })
 export class MyNavComponent {
+  panelOpenState = false;
   private breakpointObserver = inject(BreakpointObserver);
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)

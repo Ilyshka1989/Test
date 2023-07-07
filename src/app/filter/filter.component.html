@@ -13,9 +13,12 @@
         <mat-label>Телефон</mat-label>
         <input matInput placeholder="">
       </mat-form-field>
-      <mat-form-field appearance="outline">
+      <mat-form-field>
         <mat-label>Роль</mat-label>
-        <input matInput placeholder="">  
+        <mat-select>
+          <mat-option value="one">Пользователь</mat-option>
+          <mat-option value="two">Администратор</mat-option>
+        </mat-select>
       </mat-form-field>
       <mat-form-field>
         <mat-label>Дата создания</mat-label>
@@ -29,10 +32,18 @@
         <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
       </mat-form-field>
-      <mat-form-field appearance="outline">
-        <mat-label>Статус</mat-label>
-        <input matInput placeholder="">  
+      <mat-form-field>
+      <mat-label>Статус</mat-label>
+        <mat-select>
+          <mat-option value="one">Активен</mat-option>
+          <mat-option value="two">Заблокирован</mat-option>
+        </mat-select>
       </mat-form-field>
+</div>
+<div class="example-button-row">
+    <button mat-raised-button style="background-color: red;" >Применить</button>
+    <button mat-raised-button>Отмена</button>
+    <button mat-raised-button>Сбросить</button>
 </div>
 </div>
 

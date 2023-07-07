@@ -19,6 +19,9 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatNativeDateModule} from '@angular/material/core';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatSelectModule} from '@angular/material/select';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 
 
@@ -26,11 +29,11 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
   declarations: [
     AppComponent,
     TestComponent,
-    MyNavComponent,
     ButtonComponent,
     SearchPipe,
-    
-    
+    MyNavComponent,
+    FilterComponent,
+    FormsComponent
   ],
   imports: [
     BrowserModule,
@@ -42,12 +45,13 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     MatIconModule,
     MatListModule,
     MatTableModule,
-    FormsComponent,
     MatFormFieldModule,
     MatInputModule,
     MatNativeDateModule,
     MatDatepickerModule,
-    FilterComponent
+    MatExpansionModule,
+    MatSelectModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

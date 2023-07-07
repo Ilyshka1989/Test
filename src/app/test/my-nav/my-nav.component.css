@@ -23,3 +23,15 @@
 .mat-toolbar{
   background-color: gray;
 }
+mat-expansion-panel{
+  background-color: grey;
+}
+.style{
+  font-size: x-small;
+}
+mat-panel-title{
+  font-size: small;
+}
+.style1{
+  font-size: small;
+}
