@@ -35,3 +35,7 @@ mat-panel-title{
 .style1{
   font-size: small;
 }
+p{
+  position:relative;
+  left: 1100px;
+}
