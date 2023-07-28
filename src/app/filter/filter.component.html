@@ -3,15 +3,17 @@
 <div class="container">
     <mat-form-field appearance="outline">
         <mat-label>Логин</mat-label>
-        <input matInput placeholder="">
+        <input matInput (keyup)="applyFilter($event)" 
+        placeholder="Filter by subject" 
+        #input >
       </mat-form-field>
       <mat-form-field appearance="outline">
         <mat-label>E-mail</mat-label>
-        <input matInput placeholder="">
+        <input matInput >
       </mat-form-field>
       <mat-form-field appearance="outline">
         <mat-label>Телефон</mat-label>
-        <input matInput placeholder="">
+        <input matInput >
       </mat-form-field>
       <mat-form-field>
         <mat-label>Роль</mat-label>
