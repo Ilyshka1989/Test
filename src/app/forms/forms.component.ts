@@ -1,5 +1,6 @@
 import { Component, OnChanges, SimpleChanges } from '@angular/core';
 import { FilterComponent } from '../filter/filter.component';
+import { MatDatepickerInputEvent } from '@angular/material/datepicker';
 
 
 export interface User {
@@ -40,6 +41,18 @@ export interface User {
             is_ecp: true,
              status: "Заблокирован" 
             },
+            { 
+              id: false,
+               name: "petrov",
+                email: "petrov@vtb.ru",
+                 phone: "79991234599",
+                  create_at: "21.12.2021",
+                   update_at: "10.09.2015",
+                    user_id: 1,
+                     is_admin: false,
+                      is_ecp: false,
+                       status: "Заблокирован" 
+                      },
    ]
 
 @Component({
@@ -57,6 +70,15 @@ export interface User {
   rowSelected:any;
   ACTIVE = "Активен";
 NOTACTIVE = "Заблокирован";
+events: string[] = [];
+
+
+addEvent(type: string, event: MatDatepickerInputEvent<Date>) {
+  this.events.push(`${type}: ${event.value}`);
+}
+addEvent1(type: string, event: MatDatepickerInputEvent<Date>) {
+  this.events.push(`${type}: ${event.value}`);
+}
   
 
 

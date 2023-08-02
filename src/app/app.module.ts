@@ -55,7 +55,7 @@ import {MatDividerModule} from '@angular/material/divider';
     MatPaginatorModule,
     FlexLayoutModule,
     MatCheckboxModule,
-    MatDividerModule
+    MatDividerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -22,16 +22,18 @@
         <mat-option value="NOTACTIVE">Администратор</mat-option>
       </mat-select>
     </mat-form-field>
-    <mat-form-field>
+    <mat-form-field appearance="fill">
       <mat-label>Дата создания</mat-label>
-      <input matInput (keyup)="onKey5($event)" [matDatepicker]="picker">
+      <input matInput (keyup)="onKey5($event)" [matDatepicker]="picker"
+      (dateInput)="addEvent1('input', $event)" (dateChange)="addEvent1('input', $event)">
       <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
-    <mat-form-field>
+    <mat-form-field appearance="fill">
       <mat-label>Дата изменения</mat-label>
-      <input matInput (keyup)="onKey6($event)" [matDatepicker]="picker">
-      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+      <input matInput (keyup)="onKey6($event)" [matDatepicker]="picker1"
+      (dateInput)="addEvent('input', $event)" (dateChange)="addEvent('input', $event)">
+      <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
       <mat-datepicker #picker1></mat-datepicker>
     </mat-form-field>
     <mat-form-field>
