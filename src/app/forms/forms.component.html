@@ -38,14 +38,14 @@
     </mat-form-field>
     <mat-form-field>
     <mat-label>Статус</mat-label>
-    <mat-select>
-      <mat-option value="one">активен</mat-option>
-      <mat-option value="two">заблокирован</mat-option>
+    <mat-select (selectionChange)="onKey1($event)">
+      <mat-option value="one">Активен</mat-option>
+      <mat-option value="two">Заблокирован</mat-option>
     </mat-select>
     </mat-form-field>
 </div>
 <div class="example-button-row">
-  <button mat-raised-button style="background-color: red;" >Применить</button>
+  <button (click)="accept()" style="background-color: red;" >Применить</button>
   <button  mat-raised-button>Отмена</button>
   <button  mat-raised-button>Сбросить</button>
 </div>

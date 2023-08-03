@@ -1,4 +1,4 @@
-import { Component, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, OnChanges, SimpleChanges, provideZoneChangeDetection } from '@angular/core';
 import { FilterComponent } from '../filter/filter.component';
 import { MatDatepickerInputEvent } from '@angular/material/datepicker';
 
@@ -69,18 +69,15 @@ export interface User {
   isSelected = false;
   rowSelected:any;
   ACTIVE = "Активен";
-NOTACTIVE = "Заблокирован";
-events: string[] = [];
-
-
-addEvent(type: string, event: MatDatepickerInputEvent<Date>) {
-  this.events.push(`${type}: ${event.value}`);
-}
-addEvent1(type: string, event: MatDatepickerInputEvent<Date>) {
-  this.events.push(`${type}: ${event.value}`);
-}
-  
-
+  NOTACTIVE = "Заблокирован";
+  events: string[] = [];
+    filterEmail: string = "";
+    filterName: string = "";
+    filterPhone: string = "";
+    filterStatus: string = "";
+    filterCreate_at: string = "";
+    filterUpdate_at: string = "";
+    filterIs_admin: string = "";
 
   ngOnChanges(changes: SimpleChanges): void {
        // this.dataSource.filterPredicate = this.filterBySubject();  
@@ -89,39 +86,68 @@ addEvent1(type: string, event: MatDatepickerInputEvent<Date>) {
 onKey(event: any) { // without type info
   this.dataSource=this.dataSource2;
   console.log(event.target.value);
-  this.dataSource=this.dataSource.filter(user => user.email.includes(event.target.value)); 
+ this.filterEmail=event.target.value
 }
 onKey2(event: any) { // without type info
   this.dataSource=this.dataSource2;
   console.log(event.target.value);
-  this.dataSource=this.dataSource.filter(user => user.name.includes(event.target.value));
+  this.filterName=event.target.value;
 }
 onKey3(event: any) { // without type info
   this.dataSource=this.dataSource2;
   console.log(event.target.value);
-  this.dataSource=this.dataSource.filter(user => user.phone.includes(event.target.value)); 
+  this.filterPhone=event.target.value; 
 }
 onKey4(event: any) { // without type info
   this.dataSource=this.dataSource2;
   console.log(event.value);
-  this.dataSource=this.dataSource.filter(user => user.status === (event.value)); 
+  this.filterStatus=event.value; 
 }
 onKey5(event: any) {
   this.dataSource=this.dataSource2;
-  console.log(event.value);
-  this.dataSource=this.dataSource.filter(user => user.create_at.includes(event.target.value))
+  console.log(event.target.value);
+  this.filterCreate_at=event.target.value;
 }
 onKey6(event:any){
   this.dataSource=this.dataSource2;
   console.log(event.target.value);
-  this.dataSource=this.dataSource.filter(user => user.update_at.includes(event.target.value))
+  this.filterUpdate_at=event.target.value;
+}
+onKey1(event: any) {
+  this.dataSource=this.dataSource2;
+  this.filterIs_admin=event.value;
 }
 highlight(row: any){
   this.rowSelected=row.id;
 }
-
- onSubmit(): void {}
-
+addEvent(type: string, event: MatDatepickerInputEvent<Date>) {
+  this.events.push(`${type}: ${event.value}`);
 }
+addEvent1(type: string, event: MatDatepickerInputEvent<Date>) {
+  console.log(event.value)
+  this.events.push(`${type}: ${event.value}`);
+}
+  
+
+ accept() {
+  if(this.filterEmail != "") {
+    this.dataSource=this.dataSource.filter(user => user.email.includes(this.filterEmail)); 
+  }
+  (this.filterName != "") 
+    this.dataSource=this.dataSource.filter(user => user.name.includes(this.filterName)); 
+    (this.filterPhone != "") 
+    this.dataSource=this.dataSource.filter(user => user.phone.includes(this.filterPhone)); 
+    (this.filterStatus !="")
+    this.dataSource=this.dataSource.filter(user => user.status.includes(this.filterStatus)); 
+    (this.filterCreate_at !="")
+    this.dataSource=this.dataSource.filter(user => user.create_at.includes(this.filterCreate_at)); 
+    (this.filterUpdate_at !="")
+    this.dataSource=this.dataSource.filter(user => user.update_at.includes(this.filterUpdate_at)); 
+    (this.filterIs_admin !="")
+    this.dataSource=this.dataSource.filter(user => user.status.includes(this.filterIs_admin)); 
+  }
+ }
+
+
 
   
