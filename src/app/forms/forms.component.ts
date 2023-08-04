@@ -1,7 +1,7 @@
-import { Component, OnChanges, SimpleChanges, provideZoneChangeDetection } from '@angular/core';
+import { Component, OnChanges, SimpleChanges, provideZoneChangeDetection, ViewChild } from '@angular/core';
 import { FilterComponent } from '../filter/filter.component';
 import { MatDatepickerInputEvent } from '@angular/material/datepicker';
-
+import { visitAll } from '@angular/compiler';
 
 export interface User {
   id: boolean;
@@ -145,6 +145,12 @@ addEvent1(type: string, event: MatDatepickerInputEvent<Date>) {
     this.dataSource=this.dataSource.filter(user => user.update_at.includes(this.filterUpdate_at)); 
     (this.filterIs_admin !="")
     this.dataSource=this.dataSource.filter(user => user.status.includes(this.filterIs_admin)); 
+  }
+  @ViewChild('name1') fullNameInput: any;
+  @ViewChild('name2') fullNameInput2: any;
+  clear(){
+    this.fullNameInput.nativeElement.value = '';
+    this.fullNameInput2.nativeElement.value = '';
   }
  }
 
