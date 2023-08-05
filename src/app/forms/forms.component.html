@@ -3,13 +3,11 @@
 <div class="container">
   <mat-form-field appearance="outline">
       <mat-label>Логин</mat-label>
-      <input matInput (keyup)="onKey2($event)" 
-      placeholder="Введите логин" 
-      #input >
+      <input #name1 matInput (keyup)="onKey2($event)">
     </mat-form-field>
     <mat-form-field appearance="outline">
       <mat-label>E-mail</mat-label>
-      <input matInput (keyup)="onKey($event)">
+      <input #name2 matInput (keyup)="onKey($event)">
     </mat-form-field>
     <mat-form-field appearance="outline">
       <mat-label>Телефон</mat-label>
@@ -47,7 +45,7 @@
 <div class="example-button-row">
   <button (click)="accept()" style="background-color: red;" >Применить</button>
   <button  mat-raised-button>Отмена</button>
-  <button  mat-raised-button>Сбросить</button>
+  <button (click)="clear()" mat-raised-button>Сбросить</button>
 </div>
 </div>
 
