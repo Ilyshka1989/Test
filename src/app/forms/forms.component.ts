@@ -148,9 +148,11 @@ addEvent1(type: string, event: MatDatepickerInputEvent<Date>) {
   }
   @ViewChild('name1') fullNameInput: any;
   @ViewChild('name2') fullNameInput2: any;
+  @ViewChild('name3') fullNameInput3: any;
   clear(){
     this.fullNameInput.nativeElement.value = '';
     this.fullNameInput2.nativeElement.value = '';
+    this.fullNameInput3.nativeElement.value = '';
   }
  }
 

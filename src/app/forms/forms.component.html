@@ -1,18 +1,25 @@
 <div class="filter">
   <h3>Фильтр</h3>
 <div class="container">
+  <div class="container1">
   <mat-form-field appearance="outline">
       <mat-label>Логин</mat-label>
       <input #name1 matInput (keyup)="onKey2($event)">
     </mat-form-field>
+  </div>
+  <div class="container2">
     <mat-form-field appearance="outline">
       <mat-label>E-mail</mat-label>
       <input #name2 matInput (keyup)="onKey($event)">
     </mat-form-field>
+  </div>
+  <div class="container3">
     <mat-form-field appearance="outline">
       <mat-label>Телефон</mat-label>
-      <input matInput (keyup)="onKey3($event)" >
+      <input #name3 matInput (keyup)="onKey3($event)" >
     </mat-form-field>
+  </div>
+  <div class="container4">
     <mat-form-field>
       <mat-label>Роль</mat-label>
       <mat-select (selectionChange)="onKey4($event)">
@@ -20,6 +27,8 @@
         <mat-option value="NOTACTIVE">Администратор</mat-option>
       </mat-select>
     </mat-form-field>
+  </div>
+  <div class="container5">
     <mat-form-field appearance="fill">
       <mat-label>Дата создания</mat-label>
       <input matInput (keyup)="onKey5($event)" [matDatepicker]="picker"
@@ -27,6 +36,8 @@
       <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
+  </div>
+  <div class="container6">
     <mat-form-field appearance="fill">
       <mat-label>Дата изменения</mat-label>
       <input matInput (keyup)="onKey6($event)" [matDatepicker]="picker1"
@@ -34,6 +45,8 @@
       <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
       <mat-datepicker #picker1></mat-datepicker>
     </mat-form-field>
+  </div>
+  <div class="container7">
     <mat-form-field>
     <mat-label>Статус</mat-label>
     <mat-select (selectionChange)="onKey1($event)">
@@ -41,6 +54,7 @@
       <mat-option value="two">Заблокирован</mat-option>
     </mat-select>
     </mat-form-field>
+  </div>
 </div>
 <div class="example-button-row">
   <button (click)="accept()" style="background-color: red;" >Применить</button>
