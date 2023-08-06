@@ -44,5 +44,18 @@
     background: red; 
     color: #fff; 
    }*/
-   
-   
+   .example-button-row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+   }
+   .button-click3{
+    margin-left: 20px;  
+   }
+   .button-click2{
+    margin-left: 20px;  
+   }
+   .button-click1{
+    margin-left: 20px;  
+   }
+  

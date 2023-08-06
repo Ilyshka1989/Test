@@ -1,10 +1,10 @@
 .sidenav-container {
-  height: 15%;
+  height: 20%;
   
 }
 
 .sidenav {
-  width: 10%;
+  width: 15%;
   background-color: gray;
 }
 
@@ -43,5 +43,10 @@ p{
 mat-panel-title{
   text-align: center;
 }
+.style2{
+  position: relative;
+  text-align: left;
+}
+
 
 
