@@ -1,8 +1,8 @@
-import { Component, OnChanges, SimpleChanges, provideZoneChangeDetection, ViewChild } from '@angular/core';
+import { Component, OnChanges, SimpleChanges,Output,EventEmitter, provideZoneChangeDetection, ViewChild } from '@angular/core';
 import { FilterComponent } from '../filter/filter.component';
 import { MatDatepickerInputEvent } from '@angular/material/datepicker';
 import { visitAll } from '@angular/compiler';
-
+import { ButtonComponent } from '../button/button.component';
 export interface User {
   id: boolean;
   name: string;
@@ -77,7 +77,16 @@ export interface User {
     filterStatus: string = "";
     filterCreate_at: string = "";
     filterUpdate_at: string = "";
-    filterIs_admin: string = "";
+    filterIs_admin: boolean = false ;
+    Is_adminSelected: boolean = false;
+    filter: boolean = false
+    @Output()
+    PushEvent = new  EventEmitter<boolean>();
+
+     Push(){
+      this.filter = !this.filter;
+      console.log(this.filter)
+     }
 
   ngOnChanges(changes: SimpleChanges): void {
        // this.dataSource.filterPredicate = this.filterBySubject();  
@@ -101,7 +110,13 @@ onKey3(event: any) { // without type info
 onKey4(event: any) { // without type info
   this.dataSource=this.dataSource2;
   console.log(event.value);
-  this.filterStatus=event.value; 
+  if(event.value =="true")
+  {this.filterIs_admin = true;
+  this.Is_adminSelected = true;}
+  else if(event.value =="false")
+  {this.filterIs_admin = false;
+  this.Is_adminSelected = true;}
+  else this.Is_adminSelected = false; 
 }
 onKey5(event: any) {
   this.dataSource=this.dataSource2;
@@ -143,8 +158,8 @@ addEvent1(type: string, event: MatDatepickerInputEvent<Date>) {
     this.dataSource=this.dataSource.filter(user => user.create_at.includes(this.filterCreate_at)); 
     (this.filterUpdate_at !="")
     this.dataSource=this.dataSource.filter(user => user.update_at.includes(this.filterUpdate_at)); 
-    (this.filterIs_admin !="")
-    this.dataSource=this.dataSource.filter(user => user.status.includes(this.filterIs_admin)); 
+    (this.Is_adminSelected == true)
+    this.dataSource=this.dataSource.filter(user => user.is_admin ==this.filterIs_admin); 
   }
   @ViewChild('name1') fullNameInput: any;
   @ViewChild('name2') fullNameInput2: any;
@@ -153,6 +168,8 @@ addEvent1(type: string, event: MatDatepickerInputEvent<Date>) {
     this.fullNameInput.nativeElement.value = '';
     this.fullNameInput2.nativeElement.value = '';
     this.fullNameInput3.nativeElement.value = '';
+    this.Is_adminSelected = false;
+    this.dataSource=this.dataSource2;
   }
  }
 

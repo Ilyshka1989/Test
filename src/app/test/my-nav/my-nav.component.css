@@ -10,7 +10,7 @@
 
 .sidenav .mat-toolbar {
   background: inherit;
-  background-color: red;
+  background-color: #da2032;
   width: 100%;
 }
 
@@ -18,7 +18,7 @@
   position: sticky;
   top: 0;
   z-index: 1;
-  background-color: red;
+  background-color: #da2032;
 }
 .mat-toolbar{
   background-color: gray;

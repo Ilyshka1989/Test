@@ -27,18 +27,15 @@
   .container1{
     margin-left: 20px;
   }
-
-
-
   mat-paginator{
     position:relative;
     
   }
   .mat-mdc-header-row{
-    background-color: red;
+    background-color: #da2032;
   }
   .highlightTableColor{
-    background-color: blue;
+    background-color: white;
   }
   /*td:hover {
     background: red; 
