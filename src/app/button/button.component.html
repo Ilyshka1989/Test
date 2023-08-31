@@ -12,6 +12,7 @@
     <div class="button3"></div>
     <button  mat-raised-button  style="background-color:red"><mat-icon>highlight_off</mat-icon> Заблокировать</button> 
 <div class="button4">
-    <button  mat-raised-button   (PushEvent)="Push()" style="background-color:gray"> Фильтр<mat-icon>filter_list</mat-icon> </button>
+    <button  mat-raised-button   (click)="push.emit()" style="background-color:gray"> Фильтр<mat-icon>filter_list</mat-icon> </button>
+    
 </div>
 </div>

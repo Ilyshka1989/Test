@@ -25,7 +25,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatDividerModule} from '@angular/material/divider';
-
+import { CommonModule} from '@angular/common';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +34,7 @@ import {MatDividerModule} from '@angular/material/divider';
     SearchPipe,
     MyNavComponent,
     FilterComponent,
-    FormsComponent
+    FormsComponent,
   ],
   imports: [
     BrowserModule,
@@ -56,6 +56,7 @@ import {MatDividerModule} from '@angular/material/divider';
     FlexLayoutModule,
     MatCheckboxModule,
     MatDividerModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

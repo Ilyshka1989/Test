@@ -2,7 +2,6 @@ import { Component, OnChanges, SimpleChanges,Output,EventEmitter, provideZoneCha
 import { FilterComponent } from '../filter/filter.component';
 import { MatDatepickerInputEvent } from '@angular/material/datepicker';
 import { visitAll } from '@angular/compiler';
-import { ButtonComponent } from '../button/button.component';
 export interface User {
   id: boolean;
   name: string;
@@ -79,14 +78,8 @@ export interface User {
     filterUpdate_at: string = "";
     filterIs_admin: boolean = false ;
     Is_adminSelected: boolean = false;
-    filter: boolean = false
-    @Output()
-    PushEvent = new  EventEmitter<boolean>();
-
-     Push(){
-      this.filter = !this.filter;
-      console.log(this.filter)
-     }
+    filter1 = false
+    
 
   ngOnChanges(changes: SimpleChanges): void {
        // this.dataSource.filterPredicate = this.filterBySubject();  

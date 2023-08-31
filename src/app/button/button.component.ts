@@ -6,14 +6,8 @@ import { Component, Output, EventEmitter, OnInit, Input } from '@angular/core';
   styleUrls: ['./button.component.css']
 })
 export class ButtonComponent implements OnInit{
-  
+  @Output()
+   push = new  EventEmitter<void>()
   ngOnInit(): void {
   }
-  
-  @Input()
-  Push(){ this.filter = !this.filter;
-    console.log(this.Push)
   }
-  
-   
-}

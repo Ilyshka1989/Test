@@ -1,4 +1,4 @@
-<div  class="filter" *ngif="Push" (FilterEvent)="Push()">
+<div  class="filter" *ngIf="filter1" (push)="this.filter1=!this.filter1" >
   <h3>Фильтр</h3>
 <div class="container">
   <div class="container1">
