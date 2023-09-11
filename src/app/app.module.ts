@@ -10,11 +10,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MyNavComponent } from './test/my-nav/my-nav.component';
-import { ButtonComponent } from './button/button.component';
-import { FormsComponent } from './forms/forms.component';
-import { SearchPipe } from './search.pipe';
 import { MatTableModule } from '@angular/material/table';
-import { FilterComponent } from './filter/filter.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatNativeDateModule} from '@angular/material/core';
@@ -30,11 +26,7 @@ import { CommonModule} from '@angular/common';
   declarations: [
     AppComponent,
     TestComponent,
-    ButtonComponent,
-    SearchPipe,
     MyNavComponent,
-    FilterComponent,
-    FormsComponent,
   ],
   imports: [
     BrowserModule,
@@ -59,6 +51,6 @@ import { CommonModule} from '@angular/common';
     CommonModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent, TestComponent],
 })
 export class AppModule { }

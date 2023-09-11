@@ -3,3 +3,85 @@
     left:17%;
     position: absolute;
 }
+.container-button{
+    text-align: start;
+    display: flex;
+}
+.text{
+    position: relative;
+    
+}
+.example-button-row{
+    position: relative;
+}
+.button1{
+    margin-left: 20px;
+}
+.button2{
+    margin-left: 20px;
+}
+.button3{
+    margin-left: 20px;
+}
+.button4{
+    position: relative;
+    left:50%
+}
+.table1 {
+    max-width: 100%;
+    }
+    .container{
+      display: flex;
+      flex-wrap: wrap;
+      margin: 20px;
+    }
+    .container2{
+      margin-left: 20px;
+    }
+    .container3{
+      margin-left: 20px;
+    }
+    .container4{
+      margin-left: 20px;
+    }
+    .container5{
+      margin-left: 20px;
+    }
+    .container6{
+      margin-left: 20px;
+    }
+    .container7{
+      margin-left: 20px;
+    }
+    .container1{
+      margin-left: 20px;
+    }
+    mat-paginator{
+      position:relative;
+      
+    }
+    .mat-mdc-header-row{
+      background-color: #da2032;
+    }
+    .highlightTableColor{
+      background-color: white;
+    }
+    /*td:hover {
+      background: red; 
+      color: #fff; 
+     }*/
+     .example-button-row{
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+     }
+     .button-click3{
+      margin-left: 20px;  
+     }
+     .button-click2{
+      margin-left: 20px;  
+     }
+     .button-click1{
+      margin-left: 20px;  
+     }
+    
