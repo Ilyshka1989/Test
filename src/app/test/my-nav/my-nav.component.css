@@ -5,7 +5,7 @@
 
 .sidenav {
   width: 15%;
-  background-color: gray;
+  background-color: #666f78;
 }
 
 .sidenav .mat-toolbar {
@@ -21,10 +21,10 @@
   background-color: #da2032;
 }
 .mat-toolbar{
-  background-color: gray;
+  background-color: #a2a9b1
 }
 mat-expansion-panel{
-  background-color: grey;
+  background-color: #a2a9b1;
 }
 .style{
   font-size: x-small;
@@ -35,10 +35,10 @@ mat-panel-title{
 .style1{
   font-size: small;
 }
-p{
-  text-align: right;
-  right: 1%;
-  position: absolute;
+.mat1{
+text-align: center;
+position: absolute;
+right: 1%;
 }
 mat-panel-title{
   text-align: center;
@@ -47,6 +47,9 @@ mat-panel-title{
   position: relative;
   text-align: left;
 }
-
-
-
+h3{
+  color:white
+}
+p{
+ color:white
+}

@@ -8,15 +8,17 @@
       <mat-accordion>
        <mat-expansion-panel (opened)="panelOpenState = true"
                        (closed)="panelOpenState = false">
-    <mat-expansion-panel-header>
+    <mat-expansion-panel-header style=" background-color: #666f78">
       <mat-panel-title>        
-       <h3>Суперагент</h3><br><p>Банк ВТБ (ПАО)</p>
+       <h3>Суперагент</h3>
+       <br>
+       <p>Банк ВТБ (ПАО)</p>
       </mat-panel-title>
       <mat-panel-description>
       </mat-panel-description>
     </mat-expansion-panel-header>
-    <p class="style2"><mat-icon style="overflow:visible">work</mat-icon>Управление</p>
-    <a class="style" mat-list-item href="#">Карточка контагента</a>
+    <p  style="color:white" class="style2"><mat-icon style="overflow:visible">work</mat-icon>Управление</p>
+    <a  class="style" mat-list-item  href="#">Карточка контагента</a>
     <a class="style" mat-list-item href="#">Договоры контрагента</a>
   </mat-expansion-panel>
 </mat-accordion>
@@ -24,7 +26,8 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary"> <p><mat-icon>account_circle</mat-icon>Иванов <br> Администратор</p> 
+    <mat-toolbar color="primary"> <div class="mat1"> <a style="color:white" href="#"><mat-icon>account_circle</mat-icon>Иванов <br> Администратор</a> 
+      </div>
       <button
         type="button"
         aria-label="Toggle sidenav"

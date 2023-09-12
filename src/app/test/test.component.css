@@ -6,6 +6,7 @@
 .container-button{
     text-align: start;
     display: flex;
+    margin-bottom: 20px;
 }
 .text{
     position: relative;
@@ -85,3 +86,7 @@
       margin-left: 20px;  
      }
     
+    th{
+      color:#ffffff
+    }
+  
